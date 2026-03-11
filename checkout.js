@@ -1,27 +1,29 @@
+
 const QUERY = window.location.search;
 const PARAMS = new URLSearchParams(QUERY);
 
 function processData(){
+
     let shopper = PARAMS.get("shopper");
-    document.getElementById("greetings").innerText = `Hello, ${shopper}!`;  
-    
-    let appleQuantity = PARAMS.get("appleQuantity");
-
-    let bananaQuantity = PARAMS.get("bananaQuantity");
-
+    let appleAmount = PARAMS.get("appleAmount");
+    let bananaAmount = PARAMS.get("bananaAmount");
     let paymentAmount = PARAMS.get("paymentAmount");
 
-    let totalPrice = ((5)*appleQuantity) + ((3)*bananaQuantity);
+    let applePrice = 7*(appleAmount);
+    let bananaPrice = 3*(bananaAmount);
+    let totalCost = applePrice + bananaPrice;
+    let change = paymentAmount - totalCost;
 
-    let change = paymentAmount - totalPrice;
+    document.getElementById("greetings").innerText = `Thank you for ordering :D !!!`;
+    document.getElementById("shopperName").innerText = `Customer: ${shopper}`;
+    document.getElementById("appleAmount").innerText = `Apple Quantity: ℛℳ ${appleAmount}`;
+    document.getElementById("bananaAmount").innerText = `Banana Quantity: ℛℳ ${bananaAmount}`;
+    document.getElementById("totalCost").innerText = `Total Cost: ℛℳ ${totalCost}`;
 
-    let result;
-
-    if(change >= 0){
-        result = `your change is ${change}`;
-    }else if{
-        result = "you don't have enough money";
+    if (paymentAmount < totalCost) {
+        document.getElementById("paymentAmount").innerText = "Payment is insufficient";
+    } else {
+        document.getElementById("paymentAmount").innerText = `Payment Provided: ℛℳ ${paymentAmount}`;
+        document.getElementById("change").innerText = `Change: ℛℳ ${change}`;
     }
-
-    document.getElementById("result").innerText = `Total cost is ${totalPrice}, ${result}.`;
 }
