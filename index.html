@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkout Calculator</title>
+    <meta charset="UTF-8" author="Jarah Yashi R. Singh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <form name="checkout-form" action="checkout.html" onsubmit="return validateForm();">
+        <label for="shopper">Name:</label>
+        <input type="text" name="shopper" id="shopper" required>
+
+        <br><br>
+
+        <h3>Grocery Items:</h3>
+        <h4>Apple: 5.00</h4>
+        <h4>Banana: 3.00</h4>
+
+        <br>
+
+        <label for ="appleQuantity">Number of apples:</label>
+        <input type="number" name="appleQuantity" id="appleQuantity" required>
+
+        <br><br>
+
+        <label for="bananaQuantity">Number of bananas:</label>
+        <input type="number" name="bananaQuantity" id="bananaQuantity" required>
+
+        <br><br>
+
+        <label for="paymentAmount">Payment amount:</label>
+        <input type="number" name="paymentAmount" id="paymentAmount" required>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
