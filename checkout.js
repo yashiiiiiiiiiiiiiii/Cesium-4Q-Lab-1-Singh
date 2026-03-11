@@ -14,8 +14,7 @@ function processData(){
     let totalCost = applePrice + bananaPrice;
     let change = paymentAmount - totalCost;
 
-    document.getElementById("greetings").innerText = `Thank you for ordering :D !!!`;
-    document.getElementById("shopperName").innerText = `Customer: ${shopper}`;
+    document.getElementById("greetings").innerText = `Hello, ${shopper} :D !!!`;
     document.getElementById("appleAmount").innerText = `Apple Quantity: ℛℳ ${appleAmount}`;
     document.getElementById("bananaAmount").innerText = `Banana Quantity: ℛℳ ${bananaAmount}`;
     document.getElementById("totalCost").innerText = `Total Cost: ℛℳ ${totalCost}`;
@@ -27,3 +26,4 @@ function processData(){
         document.getElementById("change").innerText = `Change: ℛℳ ${change}`;
     }
 }
+
