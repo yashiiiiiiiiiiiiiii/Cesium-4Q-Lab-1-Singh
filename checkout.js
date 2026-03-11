@@ -15,15 +15,16 @@ function processData(){
     let change = paymentAmount - totalCost;
 
     document.getElementById("greetings").innerText = `Hello, ${shopper} :D !!!`;
-    document.getElementById("appleAmount").innerText = `Apple Quantity: ℛℳ ${appleAmount}`;
-    document.getElementById("bananaAmount").innerText = `Banana Quantity: ℛℳ ${bananaAmount}`;
-    document.getElementById("totalCost").innerText = `Total Cost: ℛℳ ${totalCost}`;
+    document.getElementById("appleAmount").innerText = `Apple Quantity: ${appleAmount}`;
+    document.getElementById("bananaAmount").innerText = `Banana Quantity: ${bananaAmount}`;
+    document.getElementById("totalCost").innerText = `Total Cost: $${totalCost}`;
 
     if (paymentAmount < totalCost) {
         document.getElementById("paymentAmount").innerText = "Payment is insufficient";
     } else {
-        document.getElementById("paymentAmount").innerText = `Payment Provided: ℛℳ ${paymentAmount}`;
-        document.getElementById("change").innerText = `Change: ℛℳ ${change}`;
+        document.getElementById("paymentAmount").innerText = `Payment Provided: $${paymentAmount}`;
+        document.getElementById("change").innerText = `Change: $${change}`;
     }
 }
+
 
